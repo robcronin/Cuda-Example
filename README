@@ -1,0 +1,44 @@
+Based on assignment for CUDA Assignment for MSc in HPC
+Based on calculating an Exponential Integral Calculation
+Originally completed 19/05/2017
+
+
+Note: Requires nvcc for all tests and to be run on GPU
+	mpicc/mpirun also required for some tests
+
+
+To compile:
+	make
+
+To run:
+	./run
+	mpirun ./run
+
+Tests (small grid):
+	make test
+	make mpitest
+
+Optional Flags:
+	-a [float]		- lower interval bound
+	-b [float]		- upper interval bound
+	-c			- turn off cpu calculation
+	-d			- use dynamic parallelism
+	-g			- turn off gpu calculation
+	-h			- print usage
+	-i [int]		- set max iterations
+	-j [int]		- set how many n's each slave runs at a time (if multiple cards)
+	-m [int]		- set number of samples
+	-n [int]		- set number of steps
+	-p			- use multiple cards		(MUST use mpirun here)
+	-r [int]		- uses streams and sets how many to use
+	-s 			- use shared memory
+	-t			- print out timing info
+	-v			- print out more information
+	
+
+
+
+Copyright Info
+Exponential Integral Calculation Functions adapted from
+	The book Numerical Recipes: The Art of Scientific Computing, Third Edition (2007) is published in hardcover by Cambridge University Press (ISBN-10: 0521880688, or ISBN-13: 978-0521880688)
+	See: http://apps.nrbook.com/empanel/index.html?pg=268#
